@@ -1,12 +1,7 @@
 package com.jorgesys.backgroundcolortext;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.graphics.Point;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
@@ -21,11 +16,6 @@ import org.xml.sax.XMLReader;
 
 import java.lang.reflect.Field;
 
-/**
- * Created by Jorgesys on 12/01/2016.
- */
-
-//public class HtmlStyler  implements Html.ImageGetter, Html.TagHandler {
 public class HtmlStyler  implements Html.TagHandler {
 
     private static final String TAG = "Articulo", SPAN = "span", CLASS = "class", HIGHLIGHTER = "highlighter",
@@ -104,26 +94,6 @@ public class HtmlStyler  implements Html.TagHandler {
         }
         return response;
     }
-
-    /*@Override
-    public Drawable getDrawable(String source) {
-        BitmapDrawable dp;
-        if(source.contains("separador")){
-            dp = new BitmapDrawable(mContext.getResources(),
-                    expandBitmapHorizontally(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.separador_opinion)));
-            dp.setBounds(0, 0, dp.getIntrinsicWidth(), dp.getIntrinsicHeight());
-        }else{
-            dp = new BitmapDrawable(mContext.getResources(), (Bitmap) null);
-        }
-        return dp;
-    }
-
-    public Bitmap expandBitmapHorizontally(Bitmap bmp) {
-        Bitmap cbmp = Bitmap.createBitmap(width, bmp.getHeight(), Bitmap.Config.ARGB_8888);
-        new Canvas(cbmp).drawBitmap(bmp, (width - bmp.getWidth()) / 2.0f, 0f, null);
-        return cbmp;
-    }*/
-
 
     public static int getScreenWidth(Context mContext){
         int width = 0;
